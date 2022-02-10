@@ -1,1 +1,3 @@
-# CSIT-Web
+# CSIT 281 - Javascript
+
+Welcome!
