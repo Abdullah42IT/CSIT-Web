@@ -13,13 +13,47 @@
    <script type="text/javascript">
 
    // Create an array called monthsOfTheYear that includes all 12 months.
+   var monthsOfTheYear = ["January","February","March","April","May","June","July",
+            "August","September","October","November","December"];
+
    // Create a switch statement that returns a string with how many days
    // are in each month based on which month is chosen. Have it print the
    // string statement using document.write for each month. It should print
    // out a sentence similar to:
    // 'February has 28 days except on leap year when it has 29.'
    // We will be expanding on this assignment in a future video.
-   // For now, have the variable you create in the switch set to January. 
+   // For now, have the variable you create in the switch set to January.
+   var year = 2000;
+   var month = 1;
+   var days;
+   switch (month) {
+     case 1:
+     case 3:
+     case 5:
+     case 7:
+     case 8:
+     case 10:
+     case 12:
+     days = 31;
+     break;
+     case 4:
+     case 6:
+     case 9:
+     case 11:
+     days = 30;
+     break;
+     case 2:
+     // leap year
+     if ((year % 4 == 0 && !(year % 100 == 0)) || year % 400 == 0) {
+       days = 29;
+     } else {
+       days = 28;
+     }
+     break;
+     default:
+     dayCount = -1; // invalid month
+   }
+document.write(monthsOfTheYear[month-1]+ " has " +days +" days every year" );
 
    </script>
 
